@@ -1,0 +1,52 @@
+.infP{
+    color: rgb(21, 82, 135);
+    font-size: 30px;
+    /*font-family: 'Noto Sans',sans-serif;*/
+
+}
+.infp.precio{
+  background-color: red;
+  color: white;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 40px;
+
+
+
+}
+h1{
+  font-family: 'Rubik 80s Fade', cursive;
+  color: white;
+  
+  align-items: center;
+  justify-content: center;
+  
+}
+.container{
+  display: flex;
+  /*align-items: center;
+  justify-content: center;*/
+  
+}
+.panel-title{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-label{
+  font-family: 'Noto Sans', sans-serif;
+  color: black;
+  font-size: 20px;
+
+}
+.regresar{
+
+  
+  display: inline;
+}
+
+img{
+  width: 180px;
+  height: auto;
+  margin-left: 75px;
+}

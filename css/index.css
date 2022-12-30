@@ -1,0 +1,119 @@
+* {
+    box-sizing: border-box;
+    /*Esta funcion sirve para*/
+}
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+a {
+    /*para que en algun momento podemos darle un alto*/
+    display: inline-block;
+    text-decoration: none;/*para quitar esas lineas a las a*/
+}
+header {
+    /*un espacio interno entre el borde del elemento y elemento*/
+    background-color: white;
+    position: fixed;
+
+    padding: 5px 0;
+    top: 0;
+    /*para que el menu siempre este arriba*/
+    left: 0;
+    
+    width: 100%;
+    /*para que el menu ocupe todo el ancho*/
+    z-index: 2;
+    /*para que el header se posiciojne encima de ponemos el z-index*/
+}
+header .container {
+    /*Aqui le dice que va a tomar al container que esta dentro del header*/
+    display: flex;
+    /*inline-blockhace que los elemntos se coloquen a un lado del otro pero respetando el alto que se le coloque al elemento */
+    /*El inline se coloca un lado de otro sin importarle el tamaño*/
+    /*El flex, aprovecha el espacio que sobre para acomodar a sus hijos como el a y nav*/
+    justify-content: space-between;
+    /* justify-content trabaja en base al eje x, alinea a los elementos en base al eje x*/
+    /*space-between hace que los elementos se acomoden, si hay dos uno se va a la derecha y el otro izquierda y si son 3 uno derecha, otro izquiera y uno en medio*/
+    align-items:center;
+    /*alinea los elementos en base al eje y de manera centrada*/
+    
+}
+header .container .logo {
+    /*la clase  logo esta dentro del container y el container en el header*/
+    width: 150px;
+
+}
+header .container nav a {
+    /*la clase  logo esta dentro del container y el container en el header*/
+    color: red;
+    text-decoration: none;
+    /*para quitarle la linea al hipervinculo*/
+    margin: 0 15px;
+    /*un espaciado entre hipervinculos*/
+}
+
+
+header .container nav a {
+    /*la clase  logo esta dentro del container y el container en el header*/
+    color: #8866FF;
+    text-decoration: none;
+    /*para quitarle la linea al hipervinculo*/
+    margin: 0 15px;
+    /*un espaciado entre hipervinculos*/
+}
+
+.container {
+    /*Debe tener un ancho fijo*/
+    width:1140px;
+    margin: 0 auto 0 auto;
+    /*arriba y abajo tendran 0px*/
+    padding-right: 10px;
+    padding-left: 10px;
+    position: relative;
+
+}
+
+#inicio .carrusel{
+    border: 1px solid grey;
+    
+}
+#inicio .carrusel .carousel-indicators img{
+       /*para que la imagen este a un 100%*/
+       width: 100%;
+       
+
+}
+#inicio .carousel-inner{/*para que las imagenes que esten dentro del carousel no agranden el div*/
+    width: 100%;
+    object-fit: scale-down;
+  height: 80vh;
+  margin-top: 50px;
+}
+#inicio{
+    /*se aplica el estilo a ese elemento que como nombre de id sea inicio,
+    solo un elemto tendra como id inicio*/
+    position: relative;
+    /*los demas elementos tiene posicion estatica, pero este tendra posicion relativa*/
+
+}
+#inicio {
+    width: 100%;
+    display: block;
+}
+#inicio .carrusel{
+     position: absolute;
+    top: 40%;
+    left: 50%;
+    width: 400px;
+    text-align: center;
+    /*para que los textos se centren y/o los elementosde tipo inline */
+    margin-left: -200px;
+    /*ponemos -200 para que se pueda centrar bien*/
+    margin-top: 120px;
+}
+#inicio  h5{
+    text-align: center;
+}

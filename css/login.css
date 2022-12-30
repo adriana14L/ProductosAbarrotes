@@ -1,0 +1,89 @@
+* {
+    box-sizing: border-box;
+    /*Esta funcion sirve para*/
+}
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-image: url(../img/img-login.jpg);/* 2 puntos para salid de la carpeta*/
+    
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: "Arial";
+    /*para que surja efecto la topografia que añadimos*/
+    /* font-family:"Fragment Mono" ;*/
+    font-size: 13px;
+    color: black;
+}
+.container{
+    display: flex;
+    /*centramos verticalmente*/
+    align-items: center;
+     /*centramos horizontalmente*/
+     justify-content: center;
+     height: 100vh;/*Para que el container abarque el 100%de la pantalla*/
+}
+.container-form{
+    background-color: #3449b0;
+    border-radius: 15px;
+    padding: 50px;
+    /*fondo transparente, para que se vea casi transparente*/
+    opacity: 0.9;
+
+}
+img{
+    width: 180px;
+    height: 180px;
+    margin-left: 75px;
+}
+h2{
+    text-align: center;
+    color: white;
+}
+input{
+    display: block;/*para poner los elemntos debajo del otro, porque por defecto vienen en display enline*/
+    width: 300px;
+    height: 40px;
+    margin-bottom: 30px;/*para separar las cajas de texto*/
+    padding: 0 15px;
+    font-size: 18px;
+    outline: none;
+    border: none;
+    background: transparent;
+    color: white;
+    border-bottom: 2px solid #2d2a2987;
+    
+}
+label{
+    color: white;
+    font-size: 15px;
+}
+label:hover{/*para que el boton cambie de color al pasar el mouse*/
+    color: aquamarine;
+}
+
+.check{
+    width: 15px;
+    height: 15px;
+    display: inline;/*para que el check este en linea con el texto*/
+    
+}
+.btnIngresar{
+   width: 150px;
+   border-radius: 15px;
+   background-color: #2ee300; 
+   color: white;
+   margin-top: 30px;
+   border: none;
+   border-bottom: 4px solid #006414;
+   margin-left: 90px;
+
+}
+
+.btnIngresar:active{/*para que el boton cambie de color al clickear*/
+    background-color: #a0e300;
+    width:145px ;/*su tamaño se reducira al hacer click*/
+
+}

@@ -1,0 +1,47 @@
+<?php
+require_once "conexion.php";
+session_start();
+$usuario = $_POST['usuario'];
+$password = $_POST['password'];
+
+if (empty($usuario)) {
+	echo '<script language="javascript">alert("poner un usuario");</script>'; //un mensaje de que hace falta el ususario
+	echo '<script language="javascript">
+                 window.location=window.location="index.html";
+				</script>';
+} elseif (empty($password)) {
+	echo '<script language="javascript">alert("poner una contrasena");</script>';
+	echo '<script language="javascript">
+                 window.location=window.location="index.html";
+				</script>';
+
+}else{
+    if($mysqli ->connect_error){
+        die('Fallo al conectarse' . $mysqli->connect_error);
+
+
+    }
+    $mysqli-> PDO:: select_db("miscelanea");
+    $query = "SELECT *FROM usuarios WHERE nombre = '" . $usuario . "' AND contraseña = '" . $password . "'";
+    if(!$resultado = $mysqli->query($query)){
+        echo ('Error');
+        die();
+
+    }
+    $datos = $resultado->fetch_row();
+    $registro = $resultado->num_rows;
+    $_SESSION['nombre'] = $datos[1];
+    echo $datos[1] .' usu';
+
+    if($registro == 0){
+        echo 'usuario y/o contraseña incorrecta';
+
+    }else{
+       
+        echo '<script language="javascript">
+				  window.location=window.location="principal.html";
+					</script>';
+    }
+
+}
+?>
